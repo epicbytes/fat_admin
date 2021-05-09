@@ -1,0 +1,22 @@
+import { types, getRoot } from "mobx-state-tree";
+
+export const {{snakeCase name}}Store = types
+.model("{{pascalCase name}}", {
+_id: types.maybeNull(types.string),
+title: types.optional(types.string, ""),
+image: types.maybeNull(types.string),
+is_active: false
+})
+.views(self => ({
+get root() {
+return getRoot(self);
+},
+get imgUrl() {
+if (!self.image) return null;
+return `${self.root.fat.baseUrl}/files/${self.image}`;
+}
+})).actions(self=>({
+setIsActive(is_active) {
+self.is_active = is_active;
+},
+}));

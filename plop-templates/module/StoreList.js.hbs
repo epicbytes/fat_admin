@@ -1,0 +1,21 @@
+import { types, getRoot } from "mobx-state-tree";
+import { {{pascalCase name}}Store } from "./{{snakeCase name}}Store";
+import { createApiListing } from "./extensions/createApiListing";
+
+export const {{snakeCase plural_name}}Store = types.compose(
+types
+.model("{{pascalCase plural_name}}Store", {})
+.views(self => ({
+get root() {
+return getRoot(self);
+}
+}))
+.actions(self => {
+const afterCreate = () => {};
+
+return {
+afterCreate
+};
+}),
+createApiListing({{pascalCase name}}Store)
+);

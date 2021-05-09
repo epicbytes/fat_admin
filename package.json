@@ -1,0 +1,99 @@
+{
+  "name": "fatadmin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "apexcharts": "^3.14.0",
+    "axios": "^0.19.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "bulma-checkradio": "^1.1.1",
+    "dayjs": "1.8.20",
+    "i18next": "^19.0.2",
+    "i18next-browser-languagedetector": "^4.0.1",
+    "i18next-localstorage-cache": "^1.1.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "leaflet": "^1.6.0",
+    "loglevel": "^1.6.7",
+    "loglevel-plugin-prefix": "^0.8.4",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8",
+    "mobx-react-form": "2.0.8",
+    "mobx-react-form-devtools": "^1.11.1",
+    "mobx-state-tree": "^3.15.0",
+    "path-match": "^1.2.4",
+    "path-to-regexp": "^6.1.0",
+    "qs": "^6.9.1",
+    "rc-select": "^10.1.0",
+    "react": "^16.12.0",
+    "react-bulma-components": "3.2.0",
+    "react-dom": "^16.12.0",
+    "react-dropzone": "^10.2.1",
+    "react-google-maps": "^9.4.5",
+    "react-helmet": "^5.2.1",
+    "react-i18next": "^11.3.3",
+    "react-indexed-db": "^1.0.8",
+    "react-leaflet": "^2.6.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "react-select": "^3.0.8",
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^5.0.1",
+    "sweetalert2": "^9.8.2",
+    "validatorjs": "^3.18.1"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "mobx-devtools-mst": "^0.9.21",
+    "node-sass": "^4.13.1",
+    "plop": "^2.5.4",
+    "prettier": "^1.19.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "serve": "11.2.0",
+    "webpack-bundle-analyzer": "^3.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "serve": "serve ./build",
+    "analyze": "node scripts/analyze.js",
+    "gen": "plop && yarn pret",
+    "deploy": "npx pm2 deploy production update",
+    "pret": "prettier --check --write src/**/*.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2020": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimantalDecorators": true
+      }
+    },
+    "extends": "react-app"
+  },
+  "resolutions": {
+    "@babel/core": "^7.8.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
